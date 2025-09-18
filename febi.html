@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tumbler Store - Pesan Tumbler Custom</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .hero-bg {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg fixed w-full top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <h1 class="text-2xl font-bold text-purple-600">TumblerStore</h1>
+                </div>
+                <div class="flex items-center space-x-8">
+                    <a href="#home" class="text-gray-700 hover:text-purple-600 transition duration-300">Beranda</a>
+                    <a href="#products" class="text-gray-700 hover:text-purple-600 transition duration-300">Produk</a>
+                    <a href="#order" class="text-gray-700 hover:text-purple-600 transition duration-300">Pesan</a>
+                    <a href="#contact" class="text-gray-700 hover:text-purple-600 transition duration-300">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg text-white pt-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="text-center">
+                <h2 class="text-5xl font-bold mb-6">Tumbler Custom Berkualitas</h2>
+                <p class="text-xl mb-8 max-w-2xl mx-auto">Pesan tumbler custom dengan desain sesuai keinginan Anda. Kualitas premium, harga terjangkau!</p>
+                <a href="#order" class="bg-white text-purple-600 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition duration-300">Pesan Sekarang</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Koleksi Tumbler Kami</h3>
+                <p class="text-gray-600 text-lg">Pilihan tumbler berkualitas dengan berbagai ukuran dan model</p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 bg-gradient-to-br from-blue-400 to-blue-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">🥤</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Tumbler Stainless 500ml</h4>
+                        <p class="text-gray-600 mb-4">Tumbler stainless steel premium dengan insulasi ganda</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-600">Rp 85.000</span>
+                            <button onclick="selectProduct('Tumbler Stainless 500ml', 85000)" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition duration-300">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 bg-gradient-to-br from-green-400 to-green-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">🧊</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Tumbler Glass 400ml</h4>
+                        <p class="text-gray-600 mb-4">Tumbler kaca borosilicate dengan sleeve silikon</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-600">Rp 65.000</span>
+                            <button onclick="selectProduct('Tumbler Glass 400ml', 65000)" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition duration-300">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden card-hover">
+                    <div class="h-64 bg-gradient-to-br from-pink-400 to-pink-600 flex items-center justify-center">
+                        <div class="text-white text-6xl">☕</div>
+                    </div>
+                    <div class="p-6">
+                        <h4 class="text-xl font-bold mb-2">Tumbler Travel 600ml</h4>
+                        <p class="text-gray-600 mb-4">Tumbler travel dengan tutup anti-tumpah</p>
+                        <div class="flex justify-between items-center">
+                            <span class="text-2xl font-bold text-purple-600">Rp 95.000</span>
+                            <button onclick="selectProduct('Tumbler Travel 600ml', 95000)" class="bg-purple-600 text-white px-4 py-2 rounded hover:bg-purple-700 transition duration-300">Pilih</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h3 class="text-4xl font-bold text-gray-800 mb-4">Form Pemesanan</h3>
+                <p class="text-gray-600 text-lg">Isi form di bawah untuk memesan tumbler custom Anda</p>
+            </div>
+
+            <div class="bg-gray-50 rounded-lg p-8">
+                <form id="orderForm" class="space-y-6">
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Nama Lengkap *</label>
+                            <input type="text" id="nama" name="nama" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">No. WhatsApp *</label>
+                            <input type="tel" id="whatsapp" name="whatsapp" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" placeholder="08xxxxxxxxxx">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Email</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Alamat Lengkap *</label>
+                        <textarea id="alamat" name="alamat" required rows="3" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Produk *</label>
+                            <select id="produk" name="produk" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                                <option value="">Pilih Produk</option>
+                                <option value="Tumbler Stainless 500ml">Tumbler Stainless 500ml - Rp 85.000</option>
+                                <option value="Tumbler Glass 400ml">Tumbler Glass 400ml - Rp 65.000</option>
+                                <option value="Tumbler Travel 600ml">Tumbler Travel 600ml - Rp 95.000</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 mb-2">Jumlah *</label>
+                            <input type="number" id="jumlah" name="jumlah" min="1" value="1" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Warna Tumbler *</label>
+                        <select id="warna" name="warna" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent">
+                            <option value="">Pilih Warna</option>
+                            <option value="Hitam">Hitam</option>
+                            <option value="Putih">Putih</option>
+                            <option value="Biru">Biru</option>
+                            <option value="Merah">Merah</option>
+                            <option value="Hijau">Hijau</option>
+                            <option value="Pink">Pink</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Desain Custom</label>
+                        <textarea id="desain" name="desain" rows="4" placeholder="Jelaskan desain yang Anda inginkan (logo, teks, gambar, dll)" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                    </div>
+
+                    <div>
+                        <label class="block text-sm font-medium text-gray-700 mb-2">Catatan Tambahan</label>
+                        <textarea id="catatan" name="catatan" rows="3" placeholder="Catatan khusus untuk pesanan Anda" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent"></textarea>
+                    </div>
+
+                    <div class="bg-purple-50 p-4 rounded-lg">
+                        <h4 class="font-semibold text-purple-800 mb-2">Ringkasan Pesanan:</h4>
+                        <div id="orderSummary" class="text-purple-700">
+                            <p>Pilih produk untuk melihat ringkasan pesanan</p>
+                        </div>
+                    </div>
+
+                    <div class="text-center">
+                        <button type="submit" class="bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition duration-300 text-lg">
+                            Kirim Pesanan
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h3 class="text-4xl font-bold mb-8">Hubungi Kami</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="text-4xl mb-4">📱</div>
+                        <h4 class="text-xl font-semibold mb-2">WhatsApp</h4>
+                        <p>+62 812-3456-7890</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-4">📧</div>
+                        <h4 class="text-xl font-semibold mb-2">Email</h4>
+                        <p>info@tumblerstore.com</p>
+                    </div>
+                    <div>
+                        <div class="text-4xl mb-4">📍</div>
+                        <h4 class="text-xl font-semibold mb-2">Alamat</h4>
+                        <p>Jakarta, Indonesia</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2024 TumblerStore. Semua hak dilindungi.</p>
+        </div>
+    </footer>
+
+    <script>
+        // GANTI URL INI DENGAN URL GOOGLE APPS SCRIPT ANDA
+        const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby6Dt0h3eDIPr9K-FV5UIaOqWQsk-gLKkVDhX45ezL7SV3vllB6bllJXAy7f8SNUmAVSw/exec';
+
+        // Harga produk
+        const productPrices = {
+            'Tumbler Stainless 500ml': 85000,
+            'Tumbler Glass 400ml': 65000,
+            'Tumbler Travel 600ml': 95000
+        };
+
+        // Fungsi untuk memilih produk dari katalog
+        function selectProduct(productName, price) {
+            document.getElementById('produk').value = productName;
+            updateOrderSummary();
+            
+            // Scroll ke form pemesanan
+            document.getElementById('order').scrollIntoView({ 
+                behavior: 'smooth' 
+            });
+        }
+
+        // Update ringkasan pesanan
+        function updateOrderSummary() {
+            const produk = document.getElementById('produk').value;
+            const jumlah = parseInt(document.getElementById('jumlah').value) || 1;
+            
+            if (produk && productPrices[produk]) {
+                const hargaSatuan = productPrices[produk];
+                const totalHarga = hargaSatuan * jumlah;
+                
+                document.getElementById('orderSummary').innerHTML = `
+                    <p><strong>Produk:</strong> ${produk}</p>
+                    <p><strong>Jumlah:</strong> ${jumlah} pcs</p>
+                    <p><strong>Harga Satuan:</strong> Rp ${hargaSatuan.toLocaleString('id-ID')}</p>
+                    <p><strong>Total Harga:</strong> Rp ${totalHarga.toLocaleString('id-ID')}</p>
+                `;
+            } else {
+                document.getElementById('orderSummary').innerHTML = '<p>Pilih produk untuk melihat ringkasan pesanan</p>';
+            }
+        }
+
+        // Event listeners untuk update ringkasan
+        document.getElementById('produk').addEventListener('change', updateOrderSummary);
+        document.getElementById('jumlah').addEventListener('input', updateOrderSummary);
+
+        // Smooth scrolling untuk navigasi
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Handle form submission
+        document.getElementById('orderForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitButton = e.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.textContent;
+            
+            // Disable button dan ubah teks
+            submitButton.disabled = true;
+            submitButton.textContent = 'Mengirim...';
+            
+            try {
+                // Kumpulkan data form
+                const formData = new FormData(e.target);
+                const data = {};
+                
+                // Konversi FormData ke object
+                for (let [key, value] of formData.entries()) {
+                    data[key] = value;
+                }
+                
+                // Tambahkan timestamp dan hitung total
+                data.timestamp = new Date().toLocaleString('id-ID');
+                const produk = data.produk;
+                const jumlah = parseInt(data.jumlah) || 1;
+                
+                if (productPrices[produk]) {
+                    data.harga_satuan = productPrices[produk];
+                    data.total_harga = productPrices[produk] * jumlah;
+                }
+                
+                // Kirim ke Google Sheets
+                const response = await fetch(GOOGLE_SCRIPT_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                // Tampilkan pesan sukses
+                alert('Pesanan berhasil dikirim! Kami akan menghubungi Anda segera.');
+                
+                // Reset form
+                e.target.reset();
+                updateOrderSummary();
+                
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Terjadi kesalahan saat mengirim pesanan. Silakan coba lagi atau hubungi kami langsung.');
+            } finally {
+                // Restore button
+                submitButton.disabled = false;
+                submitButton.textContent = originalText;
+            }
+        });
+
+        // Initialize
+        updateOrderSummary();
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'980d0e90f1c09fad',t:'MTc1ODE1ODgwNC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
